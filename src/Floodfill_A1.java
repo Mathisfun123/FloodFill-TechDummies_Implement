@@ -13,6 +13,9 @@ public class Floodfill_A1 {
 		System.out.println("Hello");
 		Raster t = img_toProcess.getTile(0,0);
 		int i[]= t.getSamples(0,0,5,5,0,new int[25]);
-		System.out.println(i);
+		for (int j = 0; j < i.length; j++) {
+			int i1 = i[j];
+			System.out.println(i1);
+		}
 	}
 }
