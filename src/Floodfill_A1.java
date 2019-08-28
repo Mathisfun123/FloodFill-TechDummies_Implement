@@ -12,11 +12,15 @@ public class Floodfill_A1 {
 		ImageIO.write(img_toProcess, "png", new File("Floodfill - Processed.png"));
 		System.out.println("Hello");
 		Raster t = img_toProcess.getTile(0,0);
+
 		int r[]= t.getSamples(0,0,66,57,0,new int[(66*57)]);
 		int b[]= t.getSamples(0,0,66,57,1,new int[(66*57)]);
 		int g[]= t.getSamples(0,0,66,57,2,new int[(66*57)]);
-		for (int j = 0; j < r.length; j++) {
-			System.out.println(r[j] + " " + b[j] + " " + g[j]);
+		int [][] pixels={r,b,g};
+		for (int j = 0; j < pixels.length; j++) {
+			for (int i = 0; i < pixels[j].length; i++) {
+				System.out.println(pixels[j][i]);
+			}
 		}
 	}
 }
